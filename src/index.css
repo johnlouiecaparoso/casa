@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-paper: #f7f1e6;
+  --color-paper-deep: #efe6d5;
+  --color-ink: #2b2620;
+  --color-ink-soft: #6b6355;
+  --color-clay: #b0573a;
+  --color-clay-deep: #8f4229;
+  --color-sage: #6f7a5f;
+  --color-gold: #c69a4c;
+  --color-card: #fffdf8;
+  --color-line: #e2d7c2;
+}
+
+:root {
+  --background: var(--color-paper);
+  --foreground: var(--color-ink);
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  /* subtle paper grain */
+  background-image: radial-gradient(rgba(139, 110, 66, 0.04) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+::selection {
+  background: var(--color-clay);
+  color: #fff;
+}
+
+/* Hide scrollbars until scrolling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+*:hover {
+  scrollbar-color: var(--color-line) transparent;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 8px;
+}
+*:hover::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+@keyframes casa-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: casa-fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}

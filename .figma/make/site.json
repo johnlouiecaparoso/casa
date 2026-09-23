@@ -1,0 +1,10 @@
+{
+  "description": "Discover and book boutique hotel stays with ease, featuring dynamic pricing, add-on experiences, and a seamless user-friendly interface for all travelers.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
